@@ -1,20 +1,18 @@
 class Solution {
 public:
     bool isPalindrome(string s) {
-
         string clean = "";
 
-        // Keep only letters and numbers
-        for (char ch : s) {
-            if (isalnum(ch)) {
+        for(char ch: s){
+            if(isalnum(ch)){
                 clean += tolower(ch);
-            }
-        }
+            };
+        };
 
         string check = clean;
+        reverse(check.begin(),check.end());
 
-        reverse(clean.begin(), clean.end());
-
-        return check == clean;
+        if(check == clean) return true;
+        return false;
     }
 };
