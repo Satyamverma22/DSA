@@ -1,10 +1,10 @@
 class Solution {
-    static boolean check(String s, int i, int j){
+    static boolean check(String s, int i ,int j){
         while(i <= j){
             if(s.charAt(i) != s.charAt(j)) return false;
             else{
-                j--;
                 i++;
+                j--;
             }
         }
         return true;
@@ -19,5 +19,6 @@ class Solution {
             }
         }
         return count;
+        
     }
 }
