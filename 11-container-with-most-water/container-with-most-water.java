@@ -6,17 +6,16 @@ class Solution {
         int maxwater = 0;
 
         while(i < j){
-            int h = Math.min(height[i] , height[j]);
+            int h = Math.min(height[i], height[j]);
             int w = j - i;
 
-            int area = w * h;
+            int area = h*w;
 
             maxwater = Math.max(maxwater, area);
 
             if(height[i] > height[j]) j--;
             else i++;
         }
-
         return maxwater;
     }
 }
