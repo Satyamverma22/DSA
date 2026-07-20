@@ -11,23 +11,24 @@ class Solution {
 
         while(left < right){
             if(height[left] <= height[right]){
-            if(height[left] > leftmax){
-                leftmax = height[left];
-            }else{
+                if(height[left] > leftmax){
+                 leftmax = height[left];
+            }
+
                 water += leftmax - height[left];
+                left++;
             }
-            left++;
-        }
-        else{
-            if(height[right] > rightmax){
+            else{
+                if(height[right] > rightmax){
                 rightmax = height[right];
-            }else{
+                }
+
                 water += rightmax - height[right];
+
+                right--;
             }
-            right--;
         }
 
-        }
         return water;
     }
 }
